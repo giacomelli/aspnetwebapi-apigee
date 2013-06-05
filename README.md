@@ -34,6 +34,7 @@ public void Put(long id, Customer customer)
 
 SuccessHandlingFilterAttribute
 --------
+Filter to encapsulate any error in a response with 400 status code.
 
 ```csharp
 
