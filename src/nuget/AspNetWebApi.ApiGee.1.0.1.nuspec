@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>AspNetWebApi.ApiGee</id>
+        <version>1.0.1</version>
+        <title>AspNetWebApi.ApiGee</title>
+        <authors>Diego Giacomelli</authors>
+        <owners>g1acomell1</owners>
+        <projectUrl>https://github.com/giacomelli/aspnetwebapi-apigee</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Implementing ASP .NET Web API using the Apigee Web API Design.</description>
+        <summary>Implementing ASP .NET Web API using the Apigee Web API Design.</summary>
+        <releaseNotes>Fix the namespaces.</releaseNotes>
+    </metadata>
+    <files>
+        <file src="..\AspNetWebApi.Apigee\bin\Debug\AspNetWebApi.Apigee.dll" target="lib\net40\AspNetWebApi.Apigee.dll" />
+        <file src="..\AspNetWebApi.Apigee\bin\Debug\AspNetWebApi.Apigee.pdb" target="lib\net40\AspNetWebApi.Apigee.pdb" />
+        <file src="..\AspNetWebApi.Apigee\bin\Debug\AspNetWebApi.Apigee.xml" target="lib\net40\AspNetWebApi.Apigee.xml" />
+    </files>
+</package>
