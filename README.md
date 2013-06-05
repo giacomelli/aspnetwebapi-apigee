@@ -32,14 +32,14 @@ public void Put(long id, Customer customer)
 ```
 
 
-SuccessHandlingFilterAttribute
+ErrorHandlingFilterAttribute
 --------
 Filter to encapsulate any error in a response with 400 status code.
 
 ```csharp
 
 var filters = GlobalConfiguration.Configuration.Filters;
-filters.Add(new SuccessHandlingFilterAttribute());
+filters.Add(new ErrorHandlingFilterAttribute());
 
 
 ```
