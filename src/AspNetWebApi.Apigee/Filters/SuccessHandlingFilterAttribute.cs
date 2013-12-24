@@ -17,6 +17,10 @@ namespace AspNetWebApi.ApiGee.Filters
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = false, AllowMultiple = false)]
     public class SuccessHandlingFilterAttribute : ActionFilterAttribute
     {      
+		/// <summary>
+		/// Raises the action executed event.
+		/// </summary>
+		/// <param name="filterContext">Filter context.</param>
         public override void OnActionExecuted(HttpActionExecutedContext filterContext)
         {
             if (filterContext.Response != null && filterContext.Response.IsSuccessStatusCode)
