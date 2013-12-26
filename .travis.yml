@@ -5,4 +5,4 @@ install:
   - mozroots --import --sync
  
 script:
-  - xbuild ./AspNetWebApi.Apigee
+  - xbuild ./src/AspNetWebApi.Apigee.sln
