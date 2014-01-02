@@ -18,10 +18,19 @@ namespace AspNetWebApi.ApiGee.Filters
 	public sealed class ErrorHandlingFilterAttribute : ExceptionFilterAttribute
 	{
 		#region Public Methods
+		/// <summary>
+		/// Raises the exception event.
+		/// </summary>
+		/// <param name="filterContext">Filter context.</param>
 		public override void OnException(HttpActionExecutedContext filterContext)
 		{
 			if (filterContext.Exception != null)
 			{
+				// To avoid memory leak as described here: http://stackoverflow.com/a/20762570/956886
+				if (filterContext.Response != null) {
+					filterContext.Response.Dispose ();
+				}
+
 				var exception = filterContext.Exception;
 
 				filterContext.Response = filterContext.Request.CreateResponse(HttpStatusCode.BadRequest, new { code = 400, message = exception.Message }, new JsonMediaTypeFormatter());
